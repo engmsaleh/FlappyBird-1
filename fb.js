@@ -57,7 +57,7 @@ var loadImages = function(){
 	pipeDown.onload = onImgLoad;
 	
 	scoreBoard = new Image();
-	scoreBoard.src = 'images/scoreBoard.png';
+	scoreBoard.src = 'images/scoreboard.png';
 	scoreBoard.onload = onImgLoad;
 	
 	ready = new Image();
