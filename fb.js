@@ -137,7 +137,7 @@ var drawBird = function(){
 	if(birdF % 6 == 0)
 		birdN = (birdN + 1) % 4;
 	birdY -= birdV;
-	birdV -= 0.5;
+	birdV -= 0.3;
 	if(birdY + 138 > height){
 		clearInterval(animation);
 		death = 1;
@@ -186,7 +186,7 @@ var jump = function(){
 			pipes.push(Math.floor(Math.random() * (height - 300) + 10));
 		anim();
 	}
-	birdV = 8;
+	birdV = 7;
 }
 
 window.onload = function(){
