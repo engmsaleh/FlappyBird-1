@@ -186,7 +186,7 @@ var jump = function(){
 			pipes.push(Math.floor(Math.random() * (height - 300) + 10));
 		anim();
 	}
-	birdV = 7;
+	birdV = 6;
 }
 
 window.onload = function(){
