@@ -82,9 +82,7 @@ var initCanvas = function(){
 	canvas.height = height = window.innerHeight;
 	canvas.onclick = jump;
 	window.onkeydown = jump;
-	window.addEventListener('load', function() {
-		FastClick.attach(canvas);
-	}, false);
+	FastClick.attach(canvas);
 	loadImages();
 }
 
