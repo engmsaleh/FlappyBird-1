@@ -82,6 +82,9 @@ var initCanvas = function(){
 	canvas.height = height = window.innerHeight;
 	canvas.onclick = jump;
 	window.onkeydown = jump;
+	window.addEventListener('load', function() {
+		FastClick.attach(canvas);
+	}, false);
 	loadImages();
 }
 
@@ -264,9 +267,6 @@ window.onload = function(){
 	dropSpeed = 0.3;
 	mode = 0;
 	delta = 100;
-	window.addEventListener('load', function() {
-		FastClick.attach(document.body);
-	}, false);
 	initCanvas();
 	easy = document.getElementById("easy"); easy.onclick = easyMode;
 	normal = document.getElementById("normal"); normal.onclick = normalMode;
