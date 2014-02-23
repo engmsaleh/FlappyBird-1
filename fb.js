@@ -89,8 +89,13 @@ var initCanvas = function(){
 	ctx = canvas.getContext('2d');
 	canvas.width = width = window.innerWidth;
 	canvas.height = height = window.innerHeight;
-	if(is_touch_device())
-		canvas.ontouchstart = jump;
+	if(is_touch_device()){
+		document.addEventListener("touchend", function(e) { e.preventDefault(); }, false);
+        canvas.addEventListener("touchstart", function(e) {
+	        	jump();
+            e.preventDefault();
+        }, false);
+	}
 	else
 		canvas.onmousedown = jump;
 	window.onkeydown = jump;
