@@ -90,7 +90,7 @@ var initCanvas = function(){
 	canvas.width = width = window.innerWidth;
 	canvas.height = height = window.innerHeight;
 	if(is_touch_device()){
-		document.addEventListener("touchend", function(e) { e.preventDefault(); }, false);
+		canvas.addEventListener("touchend", function(e) { e.preventDefault(); }, false);
         canvas.addEventListener("touchstart", function(e) {
 	        	jump();
             e.preventDefault();
