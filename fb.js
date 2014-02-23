@@ -83,7 +83,7 @@ var initCanvas = function(){
 //	canvas.onmousedown = jump;
 	canvas.ontouchstart = jump;
 	window.onkeydown = jump;
-	FastClick.attach(canvas);
+//	FastClick.attach(canvas);
 	loadImages();
 }
 
