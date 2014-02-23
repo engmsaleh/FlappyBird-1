@@ -81,6 +81,7 @@ var initCanvas = function(){
 	canvas.width = width = window.innerWidth;
 	canvas.height = height = window.innerHeight;
 	canvas.onmousedown = jump;
+	canvas.ontouchstart = jump;
 	window.onkeydown = jump;
 	FastClick.attach(canvas);
 	loadImages();
