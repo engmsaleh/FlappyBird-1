@@ -75,13 +75,24 @@ var loadImages = function(){
 	splash.onload = onImgLoad;
 }
 
+function is_touch_device() {  
+  try {  
+    document.createEvent("TouchEvent");  
+    return true;  
+  } catch (e) {  
+    return false;  
+  }  
+}
+
 var initCanvas = function(){
 	canvas = document.getElementById("canvas");
 	ctx = canvas.getContext('2d');
 	canvas.width = width = window.innerWidth;
 	canvas.height = height = window.innerHeight;
-//	canvas.onmousedown = jump;
-	canvas.ontouchstart = jump;
+	if(is_touch_device())
+		canvas.ontouchstart = jump;
+	else
+		canvas.onmousedown = jump;
 	window.onkeydown = jump;
 	FastClick.attach(canvas);
 	loadImages();
