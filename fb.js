@@ -238,8 +238,10 @@ var jump = function(){
 	}
 	if(mode == 0)
 		birdV = 6;
-	else 
-		birdV = 8;
+	else if(mode == 1)
+		birdV = 6;
+	else
+		birdV = 6;
 }
 
 var easy, normal, hard;
@@ -260,7 +262,7 @@ function normalMode(){
 	normal.style["box-shadow"] = "0 0 0 2px #165CF3";
 	hard.style["box-shadow"] = "";
 	clearInterval(animation);
-	dropSpeed = 0.5;
+	dropSpeed = 0.3;
 	mode = 1;
 	delta = 0;
 	initCanvas();
@@ -271,7 +273,7 @@ function hardMode(){
 	normal.style["box-shadow"] = "";
 	hard.style["box-shadow"] = "0 0 0 2px #165CF3";
 	clearInterval(animation);
-	dropSpeed = 0.5;
+	dropSpeed = 0.3;
 	mode = 2;
 	delta = 0;
 	initCanvas();
